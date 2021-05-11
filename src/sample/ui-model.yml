@@ -1,0 +1,26 @@
+site:
+  components:
+  - title: 'With title'
+    versions:
+    - url: '#fr-FR' 
+      version: 'fr-FR'
+      displayVersion: 'Français'
+  - &component
+    title: ''
+    versions:
+    - &component_version
+      url: '#en-EN' 
+      version: 'en-EN'
+      displayVersion: 'English'
+    - url: '#es-ES' 
+      version: 'es-ES'
+      displayVersion: 'Español'
+asciidoc:
+  extensions:
+    - asciidoctor-kroki
+page:
+  component: *component
+  componentVersion: *component_version
+  editUrl: http://example.com/project-xyz/blob/master/index.adoc
+  navigation:
+  - url: '#'

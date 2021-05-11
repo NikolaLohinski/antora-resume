@@ -1,0 +1,42 @@
+.toolbar {
+    color: var(--toolbar-font-color);
+    align-items: center;
+    background-color: var(--toolbar-background);
+    box-shadow: 0 1px 0 var(--toolbar-border-color);
+    display: flex;
+    font-size: calc(15 / var(--rem-base) * 1rem);
+    min-height: var(--toolbar-height);
+    padding: 5px 0;
+    justify-content: flex-start;
+    position: sticky;
+    top: var(--navbar-height);
+    z-index: var(--z-index-toolbar);
+}
+
+.toolbar a {
+    color: inherit;
+}
+
+nav i.fa.nav-toggle {
+    cursor: pointer;
+    line-height: var(--navbar-height);
+    display: inline-flex;
+}
+
+.nav-toggle:before {
+    content: "\f0c9";
+}
+
+.nav-toggle.is-active:before {
+    content: "\f00d";
+}
+
+.edit-this-page {
+    display: block;
+    padding-right: 20px;
+}
+
+.toolbar .edit-this-page a {
+    color: var(--toolbar-muted-color);
+    text-decoration: none;
+}

@@ -1,0 +1,65 @@
+{
+    "data": {
+        "values": [{
+                "skill": "PHP",
+                "level": 1
+            },
+            {
+                "skill": "PERL",
+                "level": 2
+            },
+            {
+                "skill": "CSS",
+                "level": 2
+            },
+            {
+                "skill": ".NET",
+                "level": 2
+            },
+            {
+                "skill": "Oracle",
+                "level": 2
+            },
+            {
+                "skill": "Visual Basic",
+                "level": 3
+            },
+            {
+                "skill": "XML",
+                "level": 4
+            },
+            {
+                "skill": "C#",
+                "level": 4
+            },
+            {
+                "skill": "Java",
+                "level": 4
+            }
+        ]
+    },
+    "config": {
+        "background": null
+    },
+    "mark": {
+        "type": "bar",
+        "color": "#fcfcfc",
+        "stroke": "#222222"
+    },
+    "encoding": {
+        "x": {
+            "type": "quantitative",
+            "field": "level",
+            "title": null,
+            "axis": {
+                "labelExpr": "['Basics', 'Intermediate', 'Well-practiced', 'Expert'][datum.value - 1]",
+                "labelAngle": -55
+            }
+        },
+        "y": {
+            "field": "skill",
+            "title": null,
+            "sort": "-x"
+        }
+    }
+}

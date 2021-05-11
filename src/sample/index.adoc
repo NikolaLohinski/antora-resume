@@ -1,0 +1,62 @@
+= Matthew Jones
+
+[.hide-bullets]
+* <icon-fa location-arrow> Ho Chi Minh street, 12, Hanoi, Vietnam
+* <icon-fa phone> link:tel:+848569755699[+84 8569 755 699]
+* <icon-fa envelope> link:email:matthew.jones@email.com[matthew.jones@email.com]
+* <icon-fa linkedin> link:https://linkedin.com/in/matthewjones[linkedin.com/in/matthewjones]
+
+_Web Developer with 5+ years of experience in designing and developing user interfaces, testing, debugging and training staff within eCommerce technologies. Proven ability in optimizing web functionalities that improve data retrieval and workflow efficiencies._ 
+
+== <icon-fa briefcase> Professional experience
+
+=== Web developer
+_Grooming Technologies, Fullerton, CA_ | *September 2016 - Present*
+
+* Revamped web application security components, minimizing hacker attacks from 2.3% to 0.02%
+* Designed and developed user-friendly website, including optimized check-out page that increased user clicks, and subsequently customer purchases by 20%
+* Trained over 50 staff members in internal web functions, including steps on how to independently make minor updates and changes
+* Fixed bugs from existing websites and implemented enhancements that significantly improved web functionality and speed
+
+=== Web developer
+_Focus Solutions, Fullerton, CA_ | *June 2013 - August 2016*
+
+* Developed dynamic and interactive website that ensured high traffic, page views, and user experience, resulting in 40% increase in sales revenue.
+* Oversaw full lifecycle of software development for 9 projects with 100% on-time delivery while staying 5% under budget
+* Implemented server that expedited document generation and search functionality by 20%, earning commendation and award from upper management
+* Designed processes for cleanup and performance improvement that minimized downtime by 13%
+
+== <icon-fa desktop> IT Skills
+
+=== Languages & frameworks
+
+vegalite::src/sample/itskills.json[svg]
+
+=== Certified Java Programmer
+_Official Oracle certification_ | 2010 
+
+== <icon-fa book> Education
+
+=== B.S. Web development
+_California State University, Fullerton, CA_ | *2013*
+
+=== A.A. Programming
+_Fullerton College, Fullerton, CA_ | *2010*
+
+== <icon-fa language> Languages
+
+[.hide-bullets]
+* <icon-flag fr> French *|* _Bilingual_
+* <icon-flag gb> English *|* _Fluent_
+
+== <icon-fa cubes> Other
+
+*Arts*
+
+* Guitar 
+* Violin
+
+*Sports*
+
+* Kayaking
+* Volleyball 

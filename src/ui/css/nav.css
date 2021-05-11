@@ -1,0 +1,239 @@
+.nav-container {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    width: 100%;
+    font-size: calc(17 / var(--rem-base) * 1rem);
+    z-index: var(--z-index-nav);
+    visibility: hidden;
+}
+
+.nav-container.is-active {
+    visibility: visible;
+}
+
+.nav {
+    background: var(--nav-background);
+    color: var(--nav-font-color);
+    position: relative;
+    top: 0;
+    height: auto;
+}
+
+.nav .panels {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    border-bottom: 1px solid var(--panel-border-color);
+}
+
+html.is-clipped--nav {
+    overflow-y: hidden;
+}
+
+.nav-panel-menu {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    height: var(--nav-panel-height);
+}
+
+.nav-panel-menu:not(.is-active) .nav-menu {
+    opacity: 0.75;
+}
+
+.nav-panel-menu:not(.is-active)::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-panel-menu,
+.components {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb-color) transparent;
+}
+
+.nav-panel-menu::-webkit-scrollbar,
+.components::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+.nav-panel-menu::-webkit-scrollbar-thumb,
+.components::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+}
+
+.nav-menu {
+    flex-grow: 1;
+    min-height: 0;
+    width: 100%;
+    padding: 1.5rem 0.75rem;
+    line-height: var(--nav-line-height);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav footer {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 15px;
+    color: var(--color-gray-30);
+}
+
+.nav-menu h3.title {
+    color: var(--nav-heading-font-color);
+    font-size: inherit;
+    font-weight: var(--body-font-weight-bold);
+    margin: 0;
+    padding: 0.25em 0 0.125em;
+}
+
+.nav-menu a {
+    color: inherit;
+}
+
+.nav-list {
+    margin: 0 0 0 0.75rem;
+    padding: 0;
+}
+
+.nav-menu>.nav-list {
+    margin-bottom: 0.5rem;
+}
+
+.nav-item {
+    list-style: none;
+    margin-top: 0.5em;
+}
+
+/* adds some breathing room below a nested list */
+.nav-item-toggle~.nav-list {
+    padding-bottom: 0.125rem;
+}
+
+/* matches list without a title */
+.nav-item[data-depth="0"]>.nav-list:first-child {
+    display: block;
+    margin: 0;
+}
+
+.nav-item:not(.is-active)>.nav-list {
+    display: none;
+}
+
+.nav-item-toggle {
+    background: transparent url(../img/caret.svg) no-repeat center / 50%;
+    border: none;
+    outline: none;
+    line-height: inherit;
+    position: absolute;
+    height: calc(var(--nav-line-height) * 1em);
+    width: calc(var(--nav-line-height) * 1em);
+    margin-top: -0.05em;
+    margin-left: calc(var(--nav-line-height) * -1em);
+}
+
+.nav-item.is-active>.nav-item-toggle {
+    transform: rotate(90deg);
+}
+
+.is-current-page>.nav-link,
+.is-current-page>.nav-text {
+    font-weight: var(--body-font-weight-bold);
+}
+
+.context {
+    font-size: calc(15 / var(--rem-base) * 1rem);
+    flex-shrink: 0;
+    color: var(--nav-muted-color);
+    box-shadow: 0 -1px 0 var(--nav-panel-divider-color);
+    padding: 0 0.25rem 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    line-height: 1;
+    height: var(--drawer-height);
+}
+
+.context .version {
+    background-image: url(../img/chevron.svg);
+    background-repeat: no-repeat;
+    background-position: right 0.5rem top 50%;
+    background-size: auto 0.75em;
+    padding: 0 1.5rem 0 0;
+}
+
+.components {
+    flex-grow: 1;
+    background: var(--nav-background);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    max-height: 100%;
+    display: flex;
+    line-height: 1;
+    padding: 10px 5px;
+    position: relative;
+}
+
+.component-holder {
+    border-right: 1px solid var(--navbar-border-color);
+    margin: 0 5px;
+    padding-right: 10px;
+}
+
+.component-holder:last-child {
+    border-right: none;
+}
+
+.component {
+    display: flex;
+}
+
+.components legend.title {
+    font-size: 11px;
+    min-height: 4px;
+    margin-left: 5px;
+    color: var(--color-gray-30);
+}
+
+.versions {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    line-height: 1;
+    padding: 0 5px;
+}
+
+.component .version {
+    display: block;
+    margin: 0 2px;
+}
+
+.component .version a {
+    border: 1px solid var(--nav-border-color);
+    border-radius: 3px;
+    color: inherit;
+    opacity: 0.75;
+    white-space: nowrap;
+    padding: 0.3em 0.5em;
+    display: inherit;
+    margin: 0.2em 0;
+}
+
+.component .is-current a {
+    border-color: currentColor;
+    opacity: 0.9;
+    font-weight: var(--body-font-weight-bold);
+    background: var(--navbar-font-color);
+    color: var(--navbar-background);
+}
