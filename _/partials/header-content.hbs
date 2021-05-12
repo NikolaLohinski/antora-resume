@@ -1,24 +1,30 @@
 <header class="header hide-for-print">
   <nav class="navbar">
     <div class="navbar-brand">
-      <ul class="components">
-        {{#each site.components}}
-        <div class="component-holder">
-          <legend class="title">{{ ./title }}</legend>
-          <li class="component{{#if (eq this @root.page.component)}} is-current{{/if}}">
-            <ul class="versions">
-              {{#each ./versions}}
-              <li class="version
+      <div class="components-holder">
+        <input type="checkbox" id="toggle-menu" class="toggle-menu" />
+        <label for="toggle-menu">
+          <i class="fa fa-lg"></i>
+        </label>
+        <ul class="components">
+          {{#each site.components}}
+          <div class="component-holder">
+            <legend class="title">{{ ./title }}</legend>
+            <li class="component{{#if (eq this @root.page.component)}} is-current{{/if}}">
+              <ul class="versions">
+                {{#each ./versions}}
+                <li class="version
               {{~#if (and (eq .. @root.page.component) (eq this @root.page.componentVersion))}} is-current{{/if~}}
               {{~#if (eq this ../latestVersion)}} is-latest{{/if}}">
-                <a href="{{{relativize ./url}}}">{{./displayVersion}}</a>
-              </li>
-              {{/each}}
-            </ul>
-          </li>
-        </div>
-        {{/each}}
-      </ul>
+                  <a href="{{{relativize ./url}}}">{{./displayVersion}}</a>
+                </li>
+                {{/each}}
+              </ul>
+            </li>
+          </div>
+          {{/each}}
+        </ul>
+      </div>
       {{~#if env.VERSION }}
       <code class="navbar-item theme-download">
         Download this Antora theme →

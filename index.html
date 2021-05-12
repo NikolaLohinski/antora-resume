@@ -11,31 +11,37 @@
 <header class="header hide-for-print">
   <nav class="navbar">
     <div class="navbar-brand">
-      <ul class="components">
-        <div class="component-holder">
-          <legend class="title">With title</legend>
-          <li class="component">
-            <ul class="versions">
-              <li class="version">
-                <a href="#fr-FR">Français</a>
-              </li>
-            </ul>
-          </li>
-        </div>
-        <div class="component-holder">
-          <legend class="title"></legend>
-          <li class="component is-current">
-            <ul class="versions">
-              <li class="version is-current">
-                <a href="#en-EN">English</a>
-              </li>
-              <li class="version">
-                <a href="#es-ES">Español</a>
-              </li>
-            </ul>
-          </li>
-        </div>
-      </ul>      <code class="navbar-item theme-download">
+      <div class="components-holder">
+        <input type="checkbox" id="toggle-menu" class="toggle-menu" />
+        <label for="toggle-menu">
+          <i class="fa fa-lg"></i>
+        </label>
+        <ul class="components">
+          <div class="component-holder">
+            <legend class="title">With title</legend>
+            <li class="component">
+              <ul class="versions">
+                <li class="version">
+                  <a href="#fr-FR">Français</a>
+                </li>
+              </ul>
+            </li>
+          </div>
+          <div class="component-holder">
+            <legend class="title"></legend>
+            <li class="component is-current">
+              <ul class="versions">
+                <li class="version is-current">
+                  <a href="#en-EN">English</a>
+                </li>
+                <li class="version">
+                  <a href="#es-ES">Español</a>
+                </li>
+              </ul>
+            </li>
+          </div>
+        </ul>
+      </div>      <code class="navbar-item theme-download">
         Download this Antora theme →
       </code>
       <code class="navbar-item theme-version">
