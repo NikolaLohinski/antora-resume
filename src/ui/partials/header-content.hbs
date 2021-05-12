@@ -19,12 +19,12 @@
         </div>
         {{/each}}
       </ul>
-      {{~#if env.THEME_VERSION }}
+      {{~#if env.VERSION }}
       <code class="navbar-item theme-download">
         Download this Antora theme →
       </code>
       <code class="navbar-item theme-version">
-        <a href="{{{ relativize (concat "bundle/ui-" env.THEME_VERSION ".zip")}}}">{{ env.THEME_VERSION }}</a>
+        <a href="{{{ relativize (concat "bundle/ui-" env.VERSION ".zip")}}}">{{ env.VERSION }}</a>
       </code>
       {{/if}}
       <div class="navbar-item actions">

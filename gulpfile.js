@@ -8,7 +8,7 @@ const {
 const createTask = require('./gulp.d/lib/create-task')
 const exportTasks = require('./gulp.d/lib/export-tasks')
 
-const bundleName = `ui-${process.env['THEME_VERSION'] || 'vX.Y'}`
+const bundleName = `ui-${process.env['VERSION'] || 'vX.Y'}`
 const buildDir = 'public/bundle'
 const previewSrcDir = 'src/sample'
 const previewDestDir = 'public'
