@@ -244,7 +244,6 @@ body {
     margin: 5px;
 }
 
-
 .navbar img.social-media-logo {
     height: 15px;
     opacity: 0.8;
@@ -273,8 +272,77 @@ body {
     padding-right: 0;
 }
 
+.navbar .components-holder input.toggle-menu {
+    display: none;
+}
+
+.navbar .components-holder {
+    display: flex;
+    flex-grow: 1;
+}
+
 @media screen and (max-width: 769px) {
     .navbar-item.theme-download {
         display: none;
+    }
+
+    .navbar .components-holder {
+        width: 100%;
+        display: block;
+    }
+
+    .navbar .components-holder input.toggle-menu {
+        display: none;
+    }
+
+    .navbar .components-holder input.toggle-menu+label {
+        height: 100%;
+        padding: 0 15px;
+        display: inline-flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .navbar .components-holder input.toggle-menu:checked+label .fa:before {
+        content: "\f00d";
+    }
+
+    .navbar .components-holder input.toggle-menu:checked+label:after {
+        content: '';
+        position: absolute;
+        position: fixed;
+        top: var(--navbar-height);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.76);
+    }
+
+    .navbar .components-holder input.toggle-menu+label .fa:before {
+        content: "\f0c9";
+    }
+
+    .navbar .components-holder input.toggle-menu~ul.components {
+        display: none;
+    }
+
+    .navbar .components-holder input.toggle-menu:checked~ul.components {
+        display: block;
+        max-height: none;
+        position: absolute;
+        width: 100%;
+    }
+
+    .navbar .components-holder input.toggle-menu:checked~ul.components .component-holder {
+        border-right: none;
+        border-top: 1px solid var(--navbar-border-color);
+        padding: 10px 0;
+    }
+
+    .navbar .components-holder input.toggle-menu:checked~ul.components .component-holder:first-child {
+        border-right: none;
+        border-top: none;
     }
 }
