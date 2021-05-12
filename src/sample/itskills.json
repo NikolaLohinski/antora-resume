@@ -52,8 +52,8 @@
             "field": "level",
             "title": null,
             "axis": {
-                "labelExpr": "['Basics', 'Intermediate', 'Well-practiced', 'Expert'][datum.value - 1]",
-                "labelAngle": -55
+                "labelExpr": "['★', '★★', '★★★', '★★★★'][datum.value - 1]",
+                "labelAngle": -15
             }
         },
         "y": {
