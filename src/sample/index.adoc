@@ -1,62 +1,159 @@
-= Matthew Jones
+= Antora Resume
 
 [.hide-bullets]
-* <icon-fa location-arrow> Ho Chi Minh street, 12, Hanoi, Vietnam
-* <icon-fa phone> link:tel:+848569755699[+84 8569 755 699]
-* <icon-fa envelope> link:email:matthew.jones@email.com[matthew.jones@email.com]
-* <icon-fa linkedin> link:https://linkedin.com/in/matthewjones[linkedin.com/in/matthewjones]
+* <icon-fa code> Open source 
+* <icon-fa codepen> Built for link:https://antora.org[Antora]
+* <icon-fa envelope> link:email:nikolalohinski@gmail.com[nikolalohinski@gmail.com]
+* <icon-fa github> link:https://github.com/nikolalohinski/antora-resume[github.com/nikolalohinski/antora-resume]
 
-_Web Developer with 5+ years of experience in designing and developing user interfaces, testing, debugging and training staff within eCommerce technologies. Proven ability in optimizing web functionalities that improve data retrieval and workflow efficiencies._ 
+_This is an link:https://antora.org[Antora] theme made with ❤ and enhanced to manage and deliver a printable resume. It is meant to be used as the UI bundle when using Antora site generator_ 
 
-== <icon-fa briefcase> Professional experience
+== <icon-fa thumbs-up> Usage
 
-=== Web developer
-_Grooming Technologies, Fullerton, CA_ | *September 2016 - Present*
+== <icon-fa folder-open> What's in there ?
 
-* Revamped web application security components, minimizing hacker attacks from 2.3% to 0.02%
-* Designed and developed user-friendly website, including optimized check-out page that increased user clicks, and subsequently customer purchases by 20%
-* Trained over 50 staff members in internal web functions, including steps on how to independently make minor updates and changes
-* Fixed bugs from existing websites and implemented enhancements that significantly improved web functionality and speed
+=== Antora default UI features
+_Most features coming from Antora's default UI_ | link:https://antora.gitlab.io/antora-ui-default[antora.gitlab.io/antora-ui-default]
 
-=== Web developer
-_Focus Solutions, Fullerton, CA_ | *June 2013 - August 2016*
+==== *Inline styling*
 
-* Developed dynamic and interactive website that ensured high traffic, page views, and user experience, resulting in 40% increase in sales revenue.
-* Oversaw full lifecycle of software development for 9 projects with 100% on-time delivery while staying 5% under budget
-* Implemented server that expedited document generation and search functionality by 20%, earning commendation and award from upper management
-* Designed processes for cleanup and performance improvement that minimized downtime by 13%
+* Regular text ;
+* `inline code` ;
+* [.underline]#underlined text# with `[.underline]# ... #` syntax ;
+* [.line-through]#line through text# with `[.line-through]# ... #` syntax ;
+* <<anchor,anchored text>> with `<< anchor name, anchor text >>` syntax ;
+* menu:Menu[walk-through,formatting] with the `menu:` directive ;
+* btn:[Buttons] with the `btn:` directive ;
+* kbd:[Keyboard,inputs] with the `kbd:` directive ;
 
-== <icon-fa desktop> IT Skills
+And:
 
-=== Languages & frameworks
+* [x] checked box
+* [ ] unchecked box
 
+==== *Source code*
+
+[source,json]
+----
+{
+  "source": "code" <1>
+}
+----
+<1> With annotations
+
+==== *Formatting*
+
+.Paragraph citation
+[example]
+This is an example paragraph.
+
+.Brands
+****
+With important information within a big noticeable box.
+****
+
+* unordered
+* lists
+
+And:
+
+. ordered
+. lists
+
+[NOTE]
+====
+For notes
+====
+
+[WARNING]
+====
+For warnings
+====
+
+[IMPORTANT]
+====
+For important stuff
+====
+
+.Table
+[%autowidth]
+|===
+|Input | Output | Example
+
+m|"foo\nbar"
+l|foo
+bar
+a|
+[source,ruby]
+----
+puts "foo\nbar"
+----
+|===
+
+[quote, 'Author', 'Additional metadata. https://example.com[Link to website]']
+____
+This is the content of the quote, written by the author and with additional information available on their website.
+____
+
+==== *Images*
+
+.Image title
+image::image.png[image,150]
+
+=== Icons
+_Runtime injected icons using a specific syntax_ | `<icon-... NAME>` where `NAME` is the name of the icon
+
+* link:https://fontawesome.com/v4.7.0/icons/[Font Awesome]. For example, `<icon-fa superpowers>` renders into *<icon-fa superpowers>*
+* link:https://feathericons.com/[Feather Icons]. For example, `<icon-ft cloud-drizzle>` renders into *<icon-ft cloud-drizzle>*
+* link:https://flagicons.lipis.dev/[Flag Icons]. For example, `<icon-flag be>` renders into *<icon-flag be>*
+
+
+=== Graphs
+_Integration using AsciiDoctor Kroki_ | link:https://github.com/Mogztter/asciidoctor-kroki[github.com/Mogztter/asciidoctor-kroki]
+
+.Vegalite graph
 vegalite::src/sample/itskills.json[svg]
 
-=== Certified Java Programmer
-_Official Oracle certification_ | 2010 
 
-== <icon-fa book> Education
+.Vegalite graph source json
+[source, json]
+----
+include::src/sample/itskills.json[]
+----
 
-=== B.S. Web development
-_California State University, Fullerton, CA_ | *2013*
+== <icon-fa code> Development
 
-=== A.A. Programming
-_Fullerton College, Fullerton, CA_ | *2010*
+=== Getting started
 
-== <icon-fa language> Languages
+* Install link:https://nodejs.org/en/download/[NodeJS] `>= 14.15.1`
+* Clone the repository with `git`
 
-[.hide-bullets]
-* <icon-flag fr> French *|* _Bilingual_
-* <icon-flag gb> English *|* _Fluent_
+[.copy]
+[source,bash]
+----
+$ git clone https://github.com/NikolaLohinski/antora-resume
+----
 
-== <icon-fa cubes> Other
+* Install dependencies
 
-*Arts*
+[.copy]
+[source,bash]
+----
+$ npm install
+----
 
-* Guitar 
-* Violin
+=== Run
 
-*Sports*
+[.copy]
+[source,bash]
+----
+$ npm start
+----
 
-* Kayaking
-* Volleyball 
+=== Build
+
+[.copy]
+[source,bash]
+----
+$ npm run build
+----

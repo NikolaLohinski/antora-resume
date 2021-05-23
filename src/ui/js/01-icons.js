@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function() {
     // var icons = document.querySelectorAll('*')
     var results = document.evaluate(
         "//*[contains(text(), '<icon-')]",
@@ -12,33 +12,45 @@ document.addEventListener('DOMContentLoaded', function() {
     while (true) {
         var element = results.iterateNext();
         if (!element) {
-            break
+            break;
         }
-        if (element.innerText.match('<icon-fa')) {
-            changes.push([element, element.innerHTML.replace(
-                /&lt;icon-fa (.*)&gt;/g,
-                '<i class="icon fa fa-$1"></i>'
-            )])
+        if (element.tagName.toLowerCase() === 'code') {
+            continue;
         }
-        if (element.innerText.match('<icon-ft')) {
+        if (element.innerText.match("<icon-fa")) {
+            changes.push([
+                element,
+                element.innerHTML.replace(
+                    /&lt;icon-fa (.*)&gt;/g,
+                    '<i class="icon fa fa-$1"></i>'
+                ),
+            ]);
+        }
+        if (element.innerText.match("<icon-ft")) {
             load.ft = true;
-            changes.push([element, element.innerHTML.replace(
-                /&lt;icon-ft (.*)&gt;/g,
-                '<i class="icon" data-feather="$1"></i>'
-            )])
+            changes.push([
+                element,
+                element.innerHTML.replace(
+                    /&lt;icon-ft (.*)&gt;/g,
+                    '<i class="icon" data-feather="$1"></i>'
+                ),
+            ]);
         }
-        if (element.innerText.match('<icon-flag')) {
+        if (element.innerText.match("<icon-flag")) {
             load.flag = true;
-            changes.push([element, element.innerHTML.replace(
-                /&lt;icon-flag (.*)&gt;/g,
-                '<span class="icon flag-icon flag-icon-$1"></span>'
-            )])
+            changes.push([
+                element,
+                element.innerHTML.replace(
+                    /&lt;icon-flag (.*)&gt;/g,
+                    '<span class="icon flag-icon flag-icon-$1"></span>'
+                ),
+            ]);
         }
     }
     if (load.ft) {
-        var ft = document.createElement('script');
+        var ft = document.createElement("script");
         document.head.appendChild(ft);
-        ft.addEventListener('load', function() {
+        ft.addEventListener("load", function() {
             feather.replace();
         });
         ft.setAttribute(
@@ -47,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         );
     }
     if (load.flag) {
-        var flags = document.createElement('link');
+        var flags = document.createElement("link");
         flags.setAttribute("rel", "stylesheet");
         flags.setAttribute(
             "href",
@@ -57,5 +69,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     changes.forEach(function(change) {
         change[0].innerHTML = change[1];
-    })
-})
+    });
+});

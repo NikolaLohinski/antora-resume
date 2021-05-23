@@ -1,1 +1,36 @@
 = Antora theme for your resume 
+
+_Visit the example UI at link:https://nikolalohinski.github.io/antora-resume/[nikolalohinski.github.io/antora-resume] for detailed information on how to use this theme_
+
+== Development
+
+=== Getting started
+
+* Install link:https://nodejs.org/en/download/[NodeJS] `>= 14.15.1`
+* Clone the repository with `git`
+
+[source,bash]
+----
+$ git clone https://github.com/NikolaLohinski/antora-resume
+----
+
+* Install dependencies
+
+[source,bash]
+----
+$ npm install
+----
+
+=== Run
+
+[source,bash]
+----
+$ npm start
+----
+
+=== Build
+
+[source,bash]
+----
+$ npm run build
+----

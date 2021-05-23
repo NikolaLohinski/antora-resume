@@ -1,6 +1,6 @@
 site:
   components:
-  - title: 'With title'
+  - title: 'Main language'
     versions:
     - url: '#fr-FR' 
       version: 'fr-FR'
@@ -21,6 +21,6 @@ asciidoc:
 page:
   component: *component
   componentVersion: *component_version
-  editUrl: http://example.com/project-xyz/blob/master/index.adoc
+  editUrl: https://github.com/NikolaLohinski/antora-resume/edit/main/src/sample/index.adoc
   navigation:
   - url: '#'
