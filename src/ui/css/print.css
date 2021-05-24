@@ -3,7 +3,7 @@
 }
 
 @media print {
-    main>.content {
+    body.article {
         background: #fff;
     }
 

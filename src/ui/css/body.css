@@ -1,5 +1,9 @@
 @media screen and (min-width: 1024px) {
-  .body {
-    display: flex;
-  }
+    .body {
+        display: flex;
+    }
+}
+
+body.article {
+    background: linear-gradient(#fff, #f6f6f6)
 }

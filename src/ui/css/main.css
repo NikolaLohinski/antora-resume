@@ -2,10 +2,6 @@ aside.toc.embedded {
     display: none;
 }
 
-main>.content {
-    background: linear-gradient(#fff, #f6f6f6);
-}
-
 @media screen and (max-width: 1023px) {
     aside.toc.sidebar {
         display: none;
