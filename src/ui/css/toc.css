@@ -62,11 +62,11 @@
 }
 
 .toc .toc-menu li[data-level="2"] a {
-    padding-left: 2.25rem;
+    padding-left: 2rem;
 }
 
 .toc .toc-menu li[data-level="3"] a {
-    padding-left: 2.50rem;
+    padding-left: 2.25rem;
 }
 
 .toc .toc-menu a {
