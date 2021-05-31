@@ -104,4 +104,12 @@
     .doc ul li {
         min-width: 50%;
     }
+
+    .doc div.sect1 {
+        margin-top: 0.5rem !important;
+    }
+
+    .doc>h1.page:first-child {
+        margin: 0
+    }
 }
